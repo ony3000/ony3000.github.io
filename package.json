@@ -18,7 +18,9 @@
   },
   "homepage": "https://ony3000.github.io",
   "dependencies": {
+    "css-loader": "^0.28.11",
     "lodash": "^4.17.10",
+    "style-loader": "^0.21.0",
     "webpack": "^4.8.3",
     "webpack-cli": "^2.1.3"
   }
