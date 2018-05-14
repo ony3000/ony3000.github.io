@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import './style.css';
 
 function component() {
 	var element = document.createElement('span');
@@ -13,6 +14,7 @@ function component() {
 		'webpack',
 		'4.x',
 	], ' ');
+	element.classList.add('hello');
 
 	return element;
 }
