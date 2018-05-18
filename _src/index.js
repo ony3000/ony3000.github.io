@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import './style.scss';
+import Profile from './profile.png';
 
 function component() {
 	var element = document.createElement('span');
@@ -15,6 +16,11 @@ function component() {
 		'4.x',
 	], ' ');
 	element.classList.add('hello');
+
+	var myProfile = new Image();
+	myProfile.src = Profile;
+
+	element.appendChild(myProfile);
 
 	return element;
 }
