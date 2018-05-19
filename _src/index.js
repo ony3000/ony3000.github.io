@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import './style.scss';
 import Profile from './profile.png';
+import Data from './data.xml';
 
 function component() {
 	var element = document.createElement('span');
@@ -21,6 +22,8 @@ function component() {
 	myProfile.src = Profile;
 
 	element.appendChild(myProfile);
+
+	console.log(Data);
 
 	return element;
 }
