@@ -57,6 +57,10 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			title: 'Custom Template',
 			template: '_src/assets/index.html'
+
+			// can include or exclude certain chunks by set options below
+			// chunks: ['app']
+			// excludeChunks: ['dev-helper']
 		}),
 		new MiniCssExtractPlugin({
 			filename: '[name].css',
