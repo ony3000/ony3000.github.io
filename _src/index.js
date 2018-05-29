@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import printMe from './print.js';
 import './style.scss';
 import Profile from './profile.png';
 import Data from './data.xml';
@@ -22,6 +23,13 @@ function component() {
 	myProfile.src = Profile;
 
 	element.appendChild(myProfile);
+
+	var btn = document.createElement('button');
+
+	btn.innerHTML = 'Click me and check the console!';
+	btn.onclick = printMe;
+
+	element.appendChild(btn);
 
 	console.log(Data);
 
