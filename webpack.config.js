@@ -55,7 +55,8 @@ module.exports = {
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			title: 'Output Management'
+			title: 'Custom Template',
+			template: '_src/assets/index.html'
 		}),
 		new MiniCssExtractPlugin({
 			filename: '[name].css',
