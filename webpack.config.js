@@ -13,6 +13,7 @@ module.exports = {
 		filename: '[name].bundle.js',
 		path: path.resolve(__dirname, 'dist')
 	},
+	// devtool: 'inline-source-map', // use only in development environment
 	module: {
 		rules: [
 			{
