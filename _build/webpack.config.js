@@ -11,7 +11,7 @@ module.exports = {
 	},
 	output: {
 		filename: '[name].bundle.js',
-		path: path.resolve(__dirname, 'dist')
+		path: path.resolve(__dirname, '../dist')
 	},
 	// devtool: 'inline-source-map', // use only in development environment
 	module: {
@@ -57,7 +57,9 @@ module.exports = {
 		]
 	},
 	plugins: [
-		new CleanWebpackPlugin(['dist']),
+		new CleanWebpackPlugin(['dist'], {
+			root: path.resolve(__dirname, '..')
+		}),
 		new HtmlWebpackPlugin({
 			title: 'Custom Template',
 			template: '_src/assets/index.html'
