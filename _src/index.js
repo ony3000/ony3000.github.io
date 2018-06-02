@@ -4,6 +4,9 @@ import './style.scss';
 import Profile from './profile.png';
 import Data from './data.xml';
 
+import Vue from 'vue';
+import App from './components/App.vue';
+
 function component() {
 	var element = document.createElement('span');
 
@@ -37,3 +40,21 @@ function component() {
 }
 
 document.body.appendChild(component());
+
+function vueContainer() {
+	var element = document.createElement('div');
+
+	element.id = 'app';
+
+	return element;
+}
+
+document.body.appendChild(vueContainer());
+
+const viewModal = new Vue({
+	el: '#app',
+	components: {
+		App,
+	},
+	template: '<App/>',
+});

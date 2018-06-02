@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 
 module.exports = {
@@ -42,8 +43,19 @@ module.exports = {
 				use: [
 					'xml-loader'
 				]
+			},
+			{
+				test: /\.vue$/,
+				use: [
+					'vue-loader'
+				]
 			}
 		]
+	},
+	resolve: {
+		alias: {
+			'vue$': 'vue/dist/vue.esm.js'
+		}
 	},
 	plugins: [
 		new CleanWebpackPlugin(['dist'], {
@@ -57,6 +69,7 @@ module.exports = {
 			// chunks: ['app']
 			// excludeChunks: ['dev-helper']
 		}),
+		new VueLoaderPlugin(),
 		new ManifestPlugin()
 	]
 };
