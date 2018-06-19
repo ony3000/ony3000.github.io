@@ -64,7 +64,8 @@ module.exports = {
 	resolve: {
 		alias: {
 			'vue$': 'vue/dist/vue.esm.js'
-		}
+		},
+		extensions: ['*', '.js', '.json', '.vue']
 	},
 	plugins: [
 		new CleanWebpackPlugin(['dist'], {

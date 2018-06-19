@@ -1,11 +1,11 @@
 import _ from 'lodash';
-import printMe from './print.js';
+import printMe from './print';
 import './assets/style.scss';
 import Profile from './assets/profile.png';
 import Data from './assets/data.xml';
 
 import Vue from 'vue';
-import App from './components/App.vue';
+import App from './components/App';
 
 function component() {
 	var element = document.createElement('span');
