@@ -1,4 +1,5 @@
 const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
@@ -15,6 +16,14 @@ module.exports = {
 	},
 	module: {
 		rules: [
+			{
+				test: /\.scss$/,
+				use: [
+					MiniCssExtractPlugin.loader,
+					'css-loader',
+					'sass-loader'
+				]
+			},
 			{
 				test: /\.(png|svg|jpg|gif)$/,
 				use: [
@@ -60,6 +69,10 @@ module.exports = {
 	plugins: [
 		new CleanWebpackPlugin(['dist'], {
 			root: path.resolve(__dirname, '..')
+		}),
+		new MiniCssExtractPlugin({
+			filename: '[name].css',
+			chunkFilename: '[id].css',
 		}),
 		new HtmlWebpackPlugin({
 			title: 'Custom Template',
