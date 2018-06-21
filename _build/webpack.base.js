@@ -8,7 +8,6 @@ const ManifestPlugin = require('webpack-manifest-plugin');
 module.exports = {
 	entry: {
 		app: './_src/index.js',
-		another: './_src/another-module.js',
 		print: './_src/print.js'
 	},
 	output: {
