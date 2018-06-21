@@ -1,4 +1,3 @@
-import printMe from './print';
 import './assets/style.scss';
 import Profile from './assets/profile.png';
 import Data from './assets/data.xml';
@@ -26,13 +25,6 @@ async function getComponent() {
 	myProfile.src = Profile;
 
 	element.appendChild(myProfile);
-
-	var btn = document.createElement('button');
-
-	btn.innerHTML = 'Click me and check the console!';
-	btn.onclick = printMe;
-
-	element.appendChild(btn);
 
 	console.log(Data);
 
