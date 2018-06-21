@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import printMe from './print';
 import './assets/style.scss';
 import Profile from './assets/profile.png';
@@ -7,8 +6,9 @@ import Data from './assets/data.xml';
 import Vue from 'vue';
 import App from './components/App';
 
-function component() {
+async function getComponent() {
 	var element = document.createElement('span');
+	const _ = await import(/* webpackChunkName: "lodash" */ 'lodash');
 
 	element.innerHTML = _.join([
 		'this',
@@ -39,7 +39,9 @@ function component() {
 	return element;
 }
 
-document.body.appendChild(component());
+getComponent().then(component => {
+	document.body.appendChild(component);
+});
 
 function vueContainer() {
 	var element = document.createElement('div');
