@@ -1,7 +1,10 @@
 <template>
 	<div>
 		<div class="greeting">Hello Vue!</div>
-		<button @click="printNow">Click me and check the console!</button>
+		<button @click="printNow">
+			<span>Click me and check the console!</span>
+			<i class="fa fa-hand-o-up" aria-hidden="true"></i>
+		</button>
 	</div>
 </template>
 

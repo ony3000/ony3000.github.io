@@ -1,3 +1,4 @@
+import 'font-awesome/scss/font-awesome.scss';
 import './assets/style.scss';
 import Profile from './assets/profile.png';
 import Data from './assets/data.xml';
