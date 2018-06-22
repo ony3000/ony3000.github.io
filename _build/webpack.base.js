@@ -30,7 +30,8 @@ module.exports = {
 					{
 						loader: 'url-loader',
 						options: {
-							limit: 8192
+							limit: 8192,
+							name: 'image/[name].[hash:7].[ext]'
 						}
 					}
 				]
@@ -38,19 +39,37 @@ module.exports = {
 			{
 				test: /\.(woff|woff2|eot|ttf|otf)$/,
 				use: [
-					'file-loader'
+					{
+						loader: 'file-loader',
+						options: {
+							limit: 8192,
+							name: 'font/[name].[hash:7].[ext]'
+						}
+					}
 				]
 			},
 			{
 				test: /\.(csv|tsv)$/,
 				use: [
-					'csv-loader'
+					{
+						loader: 'csv-loader',
+						options: {
+							limit: 8192,
+							name: 'data/[name].[hash:7].[ext]'
+						}
+					}
 				]
 			},
 			{
 				test: /\.xml$/,
 				use: [
-					'xml-loader'
+					{
+						loader: 'xml-loader',
+						options: {
+							limit: 8192,
+							name: 'data/[name].[hash:7].[ext]'
+						}
+					}
 				]
 			},
 			{
