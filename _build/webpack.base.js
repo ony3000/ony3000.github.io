@@ -17,7 +17,14 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: /\.scss$/,
+				test: /\.css$/,
+				use: [
+					MiniCssExtractPlugin.loader,
+					'css-loader'
+				]
+			},
+			{
+				test: /\.(sass|scss)$/,
 				use: [
 					MiniCssExtractPlugin.loader,
 					'css-loader',
@@ -25,7 +32,19 @@ module.exports = {
 				]
 			},
 			{
-				test: /\.(png|svg|jpg|gif)$/,
+				test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)$/,
+				use: [
+					{
+						loader: 'url-loader',
+						options: {
+							limit: 8192,
+							name: 'media/[name].[hash:7].[ext]'
+						}
+					}
+				]
+			},
+			{
+				test: /\.(png|svg|jpg|jpeg|gif)$/,
 				use: [
 					{
 						loader: 'url-loader',
