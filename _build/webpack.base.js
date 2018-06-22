@@ -10,8 +10,8 @@ module.exports = {
 		app: './_src/index.js',
 	},
 	output: {
-		filename: '[name].bundle.js',
-		chunkFilename: '[name].bundle.js',
+		filename: '[name].[chunkhash:7].js',
+		chunkFilename: '[name].[chunkhash:7].js',
 		path: path.resolve(__dirname, '../dist')
 	},
 	module: {
@@ -72,8 +72,8 @@ module.exports = {
 			root: path.resolve(__dirname, '..')
 		}),
 		new MiniCssExtractPlugin({
-			filename: '[name].css',
-			chunkFilename: '[id].css',
+			filename: '[name].[chunkhash:7].css',
+			chunkFilename: '[name].[chunkhash:7].css',
 		}),
 		new HtmlWebpackPlugin({
 			title: 'Custom Template',
