@@ -9,11 +9,6 @@ module.exports = {
 	entry: {
 		app: './_src/index.js',
 	},
-	output: {
-		filename: '[name].[chunkhash:7].js',
-		chunkFilename: '[name].[chunkhash:7].js',
-		path: path.resolve(__dirname, '../dist')
-	},
 	module: {
 		rules: [
 			{
@@ -108,10 +103,6 @@ module.exports = {
 	plugins: [
 		new CleanWebpackPlugin(['dist'], {
 			root: path.resolve(__dirname, '..')
-		}),
-		new MiniCssExtractPlugin({
-			filename: '[name].[chunkhash:7].css',
-			chunkFilename: '[name].[chunkhash:7].css',
 		}),
 		new HtmlWebpackPlugin({
 			title: 'Custom Template',
