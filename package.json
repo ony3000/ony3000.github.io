@@ -1,7 +1,7 @@
 {
-  "name": "ony3000.github.io",
+  "name": "webpack-study",
   "version": "0.1.0",
-  "description": "personal page",
+  "description": "Personal study for upgrading webpack version from 3 to 4.",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,14 +10,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ony3000/ony3000.github.io.git"
+    "url": "git+https://github.com/ony3000/webpack-study.git"
   },
   "author": "Hyeonjong <nianelo4@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ony3000/ony3000.github.io/issues"
+    "url": "https://github.com/ony3000/webpack-study/issues"
   },
-  "homepage": "https://ony3000.github.io",
   "dependencies": {
     "bulma": "^0.7.1",
     "clean-webpack-plugin": "^0.1.19",
