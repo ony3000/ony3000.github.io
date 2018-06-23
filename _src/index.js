@@ -4,7 +4,15 @@ import Profile from './assets/profile.png';
 import Data from './assets/data.xml';
 
 import Vue from 'vue';
+import VueRouter from 'vue-router';
+import routes from './route_rules';
 import App from './components/App';
+
+Vue.use(VueRouter);
+
+const router = new VueRouter({
+	routes
+});
 
 async function getComponent() {
 	var element = document.createElement('span');
@@ -48,6 +56,7 @@ document.body.appendChild(vueContainer());
 
 const viewModal = new Vue({
 	el: '#app',
+	router,
 	components: {
 		App,
 	},

@@ -5,6 +5,9 @@
 			<span>Click me and check the console!</span>
 			<i class="fa fa-hand-o-up" aria-hidden="true"></i>
 		</button>
+		<router-link to="/foo">Go to Foo</router-link>
+		<router-link to="/bar">Go to Bar</router-link>
+		<router-view></router-view>
 	</div>
 </template>
 
