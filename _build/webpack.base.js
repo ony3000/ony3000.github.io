@@ -19,11 +19,24 @@ module.exports = {
 				]
 			},
 			{
-				test: /\.(sass|scss)$/,
+				test: /\.scss$/,
 				use: [
 					MiniCssExtractPlugin.loader,
 					'css-loader',
 					'sass-loader'
+				]
+			},
+			{
+				test: /\.sass$/,
+				use: [
+					MiniCssExtractPlugin.loader,
+					'css-loader',
+					{
+						loader: 'sass-loader',
+						options: {
+							indentedSyntax: true
+						}
+					}
 				]
 			},
 			{
