@@ -79,30 +79,6 @@ module.exports = {
 				]
 			},
 			{
-				test: /\.(csv|tsv)$/,
-				use: [
-					{
-						loader: 'csv-loader',
-						options: {
-							limit: 8192,
-							name: 'data/[name].[hash:7].[ext]'
-						}
-					}
-				]
-			},
-			{
-				test: /\.xml$/,
-				use: [
-					{
-						loader: 'xml-loader',
-						options: {
-							limit: 8192,
-							name: 'data/[name].[hash:7].[ext]'
-						}
-					}
-				]
-			},
-			{
 				test: /\.vue$/,
 				use: [
 					'vue-loader'

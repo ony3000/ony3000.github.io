@@ -1,7 +1,6 @@
 //import 'font-awesome/scss/font-awesome.scss';
 import './assets/style.scss';
 import Profile from './assets/profile.png';
-import Data from './assets/data.xml';
 
 import Vue from 'vue';
 import VueRouter from 'vue-router';
@@ -34,8 +33,6 @@ async function getComponent() {
 	myProfile.src = Profile;
 
 	element.appendChild(myProfile);
-
-	console.log(Data);
 
 	return element;
 }
