@@ -48,7 +48,7 @@ module.exports = {
 					{
 						loader: 'url-loader',
 						options: {
-							limit: 8192,
+							limit: 2048,
 							name: 'media/[name].[hash:7].[ext]'
 						}
 					}
@@ -60,7 +60,7 @@ module.exports = {
 					{
 						loader: 'url-loader',
 						options: {
-							limit: 8192,
+							limit: 2048,
 							name: 'image/[name].[hash:7].[ext]'
 						}
 					}
@@ -72,7 +72,6 @@ module.exports = {
 					{
 						loader: 'file-loader',
 						options: {
-							limit: 8192,
 							name: 'font/[name].[hash:7].[ext]'
 						}
 					}
